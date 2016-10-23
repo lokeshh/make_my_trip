@@ -1,1 +1,17 @@
-This is user page
+<h2>
+  User Page
+</h2>
+
+<p>
+  Enter your preferences, so we can recommend you a place.
+</p>
+
+<%= form_tag(user_path, method: :post) do %>
+  <%= label_tag 'Temperature: ' %>
+  <%= text_field_tag :place, params[:temperature] %>
+  <br>
+  <%= label_tag 'Population Density: ' %>
+  <%= text_field_tag :place, params[:population_density] %>
+  <br>
+  <%= submit_tag 'Find' %>
+<% end %>

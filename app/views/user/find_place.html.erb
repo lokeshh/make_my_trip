@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Population Density</th>
+      <th>Temperature</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @places.each do |place| %>
+      <tr>
+        <td><%= place.name %></td>
+        <td><%= place.population_density %></td>
+        <td><%= place.temperature %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
